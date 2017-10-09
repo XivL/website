@@ -1,0 +1,373 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* normalize start */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* normalizing end -----------------------------------------------------------*/
+/* standards */
+body {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.border_button {
+  margin-top: 30px;
+  padding: 13px 15px 15px 15px;
+  max-width: 210px;
+  width: 70%;
+  border: 2px solid #77BAD8;
+  color: #77BAD8;
+  text-align: center;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  transition: .3s;
+  border-radius: 4px;
+}
+.border_button:visited {
+  color: #77BAD8;
+}
+.border_button:hover {
+  color: #4fa6cd;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: #77BAD8;
+}
+a:visited {
+  color: #77BAD8;
+}
+a:hover {
+  color: #4fa6cd;
+  text-decoration: none;
+}
+/* standards end -------------------------------------------------------------*/
+
+
+/*  introduction start */
+.top-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.top-container .background-image {
+  height: 110vh;
+  width: auto;
+  background-image: url("/assets/background.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.7;
+}
+
+.top-container .background-image-anim {
+  -webkit-transition: -webkit-transform 0.4s ease-out, opacity 0.8s ease-out;
+  transition: transform 0.4s ease-out, opacity 0.8s ease-out;
+  -ms-transform: translate(0px, -10px);
+  -webkit-transform: translate(0px, -10px);
+  transform: translate(0px, -10px);
+  opacity: 1;
+}
+
+.top-container .image-overlay {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  /*background-color: rgba(27, 73, 99, 0.5);*/
+}
+
+/* My new css*/
+.top-container .intro {
+    display: table;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.top-container .vert-text {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.top-container .header {
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 4.5em;
+    font-family: 'Roboto Slab', serif;
+    /*font-family: 'Poiret One', cursive;*/
+    margin-bottom: 60px;
+    /*font-size: 10.0vw;*/
+}
+
+.top-container .sub-header {
+    color: white;
+    text-shadow: 0 0 .313em #d96459, 0 0 .625em #d96459;
+    margin-bottom: 50px;
+}
+
+.top-container .icons {
+    padding-left: 5px;
+    color: #fff;
+}
+.top-container .icons:hover {
+    color: #f44336;
+}
+
+/* End new css*/
+
+/* introduction end --------------------------------------------*/
+
+/* timeline start   --------------------------------------------*/
+.timeline{
+  margin-top: 50px;
+}
+/* timeline end  -----------------------------------------------*/
+
+/* project highlights start */
+.project_highlights {
+  width: 100%;
+  margin-bottom: 100px;
+}
+.project_highlights h1 {
+  font-family: "Hind", sans-serif;
+  letter-spacing: 2.24px;
+  font-size: 30px;
+  font-weight: 500;
+  color: #4A4A4A;
+  text-align: center;
+}
+.project_highlights h2 {
+  font-family: "Hind", sans-serif;
+  letter-spacing: 2.24px;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  color: #4A4A4A;
+}
+.project_highlights .link {
+  font-family: 'Hind', sans-serif;
+  letter-spacing: 1.55px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #77BAD8;
+  text-decoration: none;
+}
+.project_highlights .link:hover {
+  text-decoration: underline;
+}
+.project_highlights p {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: italic;
+  color: #9B9B9B;
+  line-height: 25px;
+  margin-top: 20px;
+  width: 80%;
+  max-width: 500px;
+}
+.project_highlights .title_underline {
+  width: 170px;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: #4A4A4A;
+  margin: 10px auto;
+}
+.project_highlights .project_instance {
+  margin-top: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.project_highlights .project_photo {
+  width: calc(50% - 80px);
+  text-align: right;
+  padding-left: 50px;
+}
+.project_highlights .project_img {
+  height: auto;
+  width: 450px;
+  max-width: 100%;
+}
+.project_highlights .project_text_container {
+  width: calc(50% - 30px);
+  height: 100%;
+  text-align: left;
+}
+.project_highlights .appstore_badge {
+  margin-top: 20px;
+}
+.project_highlights .larger_button {
+  width: 250px;
+  padding: 18px 20px 20px 20px;
+  margin-left: calc(50% - 125px);
+  margin-top: 130px;
+}
+.project_highlights .button_subtext {
+  max-width: 100%;
+  text-align: center;
+  width: 100%;
+  display: table;
+  margin: 0 auto;
+}
+.project_highlights .button_subtext_container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* project highlights end ----------------------------------------------------*/
+/* HALF SCREEN */
+@media screen and (max-width: 720px) {
+  /* timeline half screen */
+  .timeline .downwards_curved_triangle {
+    margin-left: -30px;
+  }
+
+  .timeline .timeline_vert_line {
+    margin-left: 43px;
+  }
+
+  .timeline .info_left {
+    margin-left: 80px;
+    max-width: calc(100% - 100px);
+    text-align: left;
+  }
+
+  .timeline .job_marker_outer {
+    margin-left: 34px;
+  }
+
+  .timeline .info_left {
+    width: calc(100% - 30px);
+    margin-left: 30px;
+  }
+
+  .timeline .info_right {
+    margin-left: 63px;
+    margin-top: 20px;
+    width: calc(100% - 100px);
+  }
+
+  /** timeline half screen end **/
+  /* project highlights half screen */
+  .project_highlights .project_instance {
+    display: block;
+    width: 100%;
+  }
+
+  .project_highlights .project_photo {
+    text-align: center;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .project_highlights .project_text_container {
+    width: 70%;
+    height: auto;
+    text-align: left;
+    margin: 50px 0px 0px 15%;
+  }
+
+  .project_highlights p {
+    width: 100%;
+  }
+
+  .project_highlights .project_img {
+    max-width: 80%;
+  }
+
+  .project_highlights .button_subtext {
+    width: 80%;
+    max-width: 500px;
+  }
+
+  /** project highlights half screen end **/
+}
+/* MOBILE */
+@media only screen and (max-device-width: 480px) and (orientation: portrait) {
+  /* top container mobile */
+  .top-container .intro-container-right {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 0px;
+    min-width: 330px;
+  }
+
+  /** top container mobile end **/
+  /* job section mobile */
+  .timeline .info_right .job_content_text {
+    display: none;
+  }
+
+  .timeline .info_right .job_content_text_mobile {
+    display: inline;
+  }
+
+  /** job section mobile end **/
+  /* project highlights mobile */
+  .project_highlights .project_instance {
+    margin-top: 100px;
+  }
+
+  /** project highlights mobile end **/
+}

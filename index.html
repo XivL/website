@@ -1,53 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Kai Lin</title>
-  <meta name="description" content="My personal website">
-  <meta name="author" content="Kai Lin">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/particles.css">
-
-  <link rel="stylesheet" type="text/css" href="lib/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
-</head> 
+---
+layout: default
+title: Kai Lin
+---
 
 <body>
-  <!-- particles.js -->
-  <div id="particles-js"></div>
-  <div class="info"></div>
-  <div class="header">
-      <div class="vert-text">
-          <h1 class="heading"> I'm Kai Lin</h1>
-          <h2 class="heading-2">Developer | Programmer | Learner</h2>
+  <div id="introduction" class="top-container">
+      <div class="background-image">
+      <div class="image-overlay">
+        <div class="intro">
+        <div class="vert-text">
+          <h1 class="header"> I'm Kai Lin</h1>
+          <h2 class="sub-header">Developer | Programmer | Learner</h2>
           <div id="social-row">
               <ul class="list-inline">
-                  <!-- <li><a href="./documents/resume.pdf" target="_blank" data-toggle="tooltip" title="Resume"><i class="icons fa fa-file-text fa-3x"></i></a></li> -->
-                  <li><a href="https://bugzilla.mozilla.org/user_profile?user_id=596587" target="_blank" data-toggle="tooltip" title="Bugzilla"><i class="icons fa fa-firefox fa-3x"></i></a></li>
-                  <li><a href="https://www.linkedin.com/in/kailin9/" target="_blank" data-toggle="tooltip" title="LinkedIn"><i class="icons fa fa-linkedin fa-3x"></i></a></li>
-                  <li><a href="https://github.com/xivl/"" target="_blank" data-toggle="tooltip" title="Github"><i class="icons fa fa-github fa-3x"></i></a></li>
-                  <li><a href="mailto:kaida7189@gmail.com" target="_blank" data-toggle="tooltip" title="Email"><i class="icons fa fa-envelope fa-3x"></i></a></li>
+                  <li><a href="https://bugzilla.mozilla.org/user_profile?user_id=596587" target="_blank" data-toggle="tooltip" title="Bugzilla"><i class="icons fa fa-firefox fa-2x"></i></a></li>
+                  <li><a href="https://www.linkedin.com/in/kailin9/" target="_blank" data-toggle="tooltip" title="LinkedIn"><i class="icons fa fa-linkedin fa-2x"></i></a></li>
+                  <li><a href="https://github.com/xivl/"" target="_blank" data-toggle="tooltip" title="Github"><i class="icons fa fa-github fa-2x"></i></a></li>
+                  <li><a href="mailto:kaida7189@gmail.com" target="_blank" data-toggle="tooltip" title="Email"><i class="icons fa fa-envelope fa-2x"></i></a></li>
               </ul>
           </div>
-          <!--<div id="project">Explore Projects</div>  -->
+        </div>
+        </div>
+      </div>
       </div>
   </div>
-  <!-- scripts -->
-  <script src="js/particles.js"></script>
-  <script src="js/app.js"></script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-101939477-1', 'auto');
-    ga('send', 'pageview');
+  <div class="timeline"></div>
 
-  </script>
+  <div class="project_highlights" id="projects">
+    <h1>PROJECT HIGHLIGHTS</h1>
+    <div class="title_underline"></div>
+
+    {% for post in site.posts %}
+    <div class="project_instance">
+      <div class="project_photo">
+        <img class="project_img" src="projects/{{post.folder}}/preview.png">
+      </div>
+
+      <div class="project_text_container">
+        <h2>{{post.preview_title}}</h2>
+        <a class= "link" href="{{post.link}}" target="_blank">{{post.link_title}}</a>
+        <p>{{post.preview_description }}</p>
+        {% if post.hidden %}
+          <a href="#"><div class="border_button">{{post.button_text}}<br>(coming soon)</div></a>
+        {% else %}
+          <a href="{{post.url}}"><div class="border_button">{{post.button_text}}</div></a>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+
+    <a href="mailto:kaida7189@gmail.com"><div class="border_button larger_button">Contact</div></a>
+    <div class="button_subtext_container"><p class="button_subtext">Looking forward</p></div>
+
+  </div>
+
 </body>
-</html>
+
+
+<script type="text/javascript">
+  window.onload = function () {
+    function applyAnim(className, animName) {
+      var els = document.getElementsByClassName(className);
+      if (els && els.length > 0) {
+        el = els[0]
+        if (el)
+          el.classList.add(animName);
+      }
+    }
+    applyAnim("intro-container-right", "intro-container-right-anim");
+    applyAnim("background-image", "background-image-anim");
+    applyAnim("downwards_curved_triangle", "down_arrow_anim");
+    setTimeout( function(){applyAnim("scroll-indicator", "scroll-indicator-fade-in-anim")}, 2000 );
+    setTimeout( function(){applyAnim("scroll-indicator", "scroll-indicator-bounce-anim")}, 2500 );
+  }
+  function readMoreClicked(jobID) {
+    var test = document.getElementById('job_'+jobID).style.display = "inline";
+    document.getElementById('job_'+jobID+'_trunc').style.display = "none";
+  }
+</script>
