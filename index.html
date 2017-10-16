@@ -56,26 +56,3 @@ title: Kai Lin
   </div>
 
 </body>
-
-
-<script type="text/javascript">
-  window.onload = function () {
-    function applyAnim(className, animName) {
-      var els = document.getElementsByClassName(className);
-      if (els && els.length > 0) {
-        el = els[0]
-        if (el)
-          el.classList.add(animName);
-      }
-    }
-    applyAnim("intro-container-right", "intro-container-right-anim");
-    applyAnim("background-image", "background-image-anim");
-    applyAnim("downwards_curved_triangle", "down_arrow_anim");
-    setTimeout( function(){applyAnim("scroll-indicator", "scroll-indicator-fade-in-anim")}, 2000 );
-    setTimeout( function(){applyAnim("scroll-indicator", "scroll-indicator-bounce-anim")}, 2500 );
-  }
-  function readMoreClicked(jobID) {
-    var test = document.getElementById('job_'+jobID).style.display = "inline";
-    document.getElementById('job_'+jobID+'_trunc').style.display = "none";
-  }
-</script>

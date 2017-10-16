@@ -112,10 +112,6 @@ a:hover {
   -o-background-size: cover;
   background-size: cover;
   background-position: center center;
-  opacity: 0.7;
-}
-
-.top-container .background-image-anim {
   -webkit-transition: -webkit-transform 0.4s ease-out, opacity 0.8s ease-out;
   transition: transform 0.4s ease-out, opacity 0.8s ease-out;
   -ms-transform: translate(0px, -10px);
@@ -123,6 +119,15 @@ a:hover {
   transform: translate(0px, -10px);
   opacity: 1;
 }
+
+/*.top-container .background-image-anim {
+  -webkit-transition: -webkit-transform 0.4s ease-out, opacity 0.8s ease-out;
+  transition: transform 0.4s ease-out, opacity 0.8s ease-out;
+  -ms-transform: translate(0px, -10px);
+  -webkit-transform: translate(0px, -10px);
+  transform: translate(0px, -10px);
+  opacity: 1;
+}*/
 
 .top-container .image-overlay {
   width: 100%;
@@ -155,15 +160,14 @@ a:hover {
     color: white;
     font-size: 4.5em;
     font-family: 'Roboto Slab', serif;
-    /*font-family: 'Poiret One', cursive;*/
     margin-bottom: 60px;
-    /*font-size: 10.0vw;*/
 }
 
 .top-container .sub-header {
     color: white;
     text-shadow: 0 0 .313em #d96459, 0 0 .625em #d96459;
     margin-bottom: 50px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .top-container .icons {
