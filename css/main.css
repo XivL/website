@@ -340,13 +340,18 @@ a:hover {
 
 /* HALF SCREEN */
 @media screen and (max-width:720px) {
-  /* project description half screen */
-  .project_description p {
-    max-width: 80%;
-    width: fit-content;
-    width: -moz-fit-content;
-    width: -webkit-fit-content;
-    padding-left: 10px;
+ 
+  /* project highlights half screen */
+  .project_highlights .project_instance {
+    display: block;
+    width: 100%;
+  }
+
+  .project_highlights .project_photo {
+    text-align: center;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
   }
 
   .project_description img {
@@ -361,6 +366,13 @@ a:hover {
     max-width: 80%;
   }
   /** project description half screen end **/
+}
+
+  .project_highlights .button_subtext {
+    width: 80%;
+    max-width: 500px;
+  }
+  /** project highlights half screen end **/
 }
 
 
