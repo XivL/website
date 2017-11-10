@@ -83,102 +83,161 @@ body {
 
 a {
   text-decoration: none;
-  color: #77BAD8;
+  color: #fff;;
 }
 a:visited {
-  color: #77BAD8;
+  color: #fff;
 }
 a:hover {
-  color: #4fa6cd;
+  color: #fff;
   text-decoration: none;
 }
 /* standards end -------------------------------------------------------------*/
 
-
+/* The following CSS was taken from cwRichardKim.com with some mini modify
+ *
+ */
 /*  introduction start */
 .top-container {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  margin-bottom: 40px;
 }
 
 .top-container .background-image {
-  height: 110vh;
+  height: 110%;
   width: auto;
   background-image: url("/assets/background.jpg");
   background-repeat: no-repeat;
-  /* -webkit-background-size: cover;
+  -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover; */
+  -o-background-size: cover;
   background-size: cover;
   background-position: center center;
-  /* -webkit-transition: -webkit-transform 0.4s ease-out, opacity 0.8s ease-out; */
-  transition: transform 0.4s ease-out, opacity 0.8s ease-out;
-  /* -ms-transform: translate(0px, -10px);
-  -webkit-transform: translate(0px, -10px); */
-  transform: translate(0px, -10px);
-  opacity: 1;
+  -webkit-transition: -webkit-transform 0.4s ease-out, opacity 0.8s ease-out;
+  transition:                 transform 0.4s ease-out, opacity 0.8s ease-out;
 }
 
-/*.top-container .background-image-anim {
-  -webkit-transition: -webkit-transform 0.4s ease-out, opacity 0.8s ease-out;
-  transition: transform 0.4s ease-out, opacity 0.8s ease-out;
-  -ms-transform: translate(0px, -10px);
-  -webkit-transform: translate(0px, -10px);
-  transform: translate(0px, -10px);
+.top-container .background-image-anim {
+  -ms-transform:      translate(0px,-10px);
+  -webkit-transform:  translate(0px,-10px);
+  transform:          translate(0px,-10px);
   opacity: 1;
-}*/
+}
 
 .top-container .image-overlay {
   width: 100%;
   height: 100%;
   display: -webkit-flex;
   display: flex;
-  /* -webkit-justify-content: flex-end; */
+  -webkit-justify-content: flex-end;
   justify-content: flex-end;
-  /*background-color: rgba(27, 73, 99, 0.5);*/
 }
 
-/* My new css*/
-.top-container .intro {
-    display: table;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    vertical-align: middle;
+.top-container .intro-container-middle {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 80px 60px 60px 60px;
+  opacity: 0;
+  min-width: 440px;
+  -webkit-transition: -webkit-transform 0.5s ease-out, opacity 1s ease-out;
+  transition:                 transform 0.5s ease-out, opacity 1s ease-out;
 }
 
-.top-container .vert-text {
-    display: table-cell;
-    vertical-align: middle;
+.top-container .intro-container-middle-anim {
+  -ms-transform: translate(0px,-40px);
+  -webkit-transform: translate(0px,-40px);
+  transform: translate(0px,-40px);
+  opacity: 1;
+
+  text-align: center;
 }
 
-.top-container .header {
-    padding: 0;
-    margin: 0;
-    color: white;
-    font-size: 4.5em;
-    font-family: 'Roboto Slab', serif;
-    margin-bottom: 60px;
+.top-container .intro-content {
+  width: 100%;
+  /* max-width: 600px; */
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+
 }
 
-.top-container .sub-header {
-    color: white;
-    text-shadow: 0 0 .313em #d96459, 0 0 .625em #d96459;
-    margin-bottom: 50px;
-    font-family: 'Montserrat', sans-serif;
+.top-container .intro-content div {
+  -webkit-transform: translateZ(0px); /* fixes safari text flicker */
+  -moz-osx-font-smoothing: grayscale; /* fixes moz text flicker */
 }
 
-.top-container .icons {
-    padding-left: 5px;
-    color: #fff;
-}
-.top-container .icons:hover {
-    color: #f44336;
+.top-container .header-container {
+  margin-bottom: 18px;
+  font-size: 100px;
+  font-family: 'Fjalla One', sans-serif;
+
+  /* max-width: 600px; */
+  text-align: center;
 }
 
-/* End new css*/
+.top-container .sub-header-container {
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 3px;
+  font-size: 20px;
+  
+  text-align: center;
+}
+
+.top-container .description-container {
+  color: #fff;
+  text-shadow: 0 0 .313em #d96459, 0 0 .625em #d96459;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 3px;
+  font-size: 17px;
+  /* max-width: 400px; */
+
+  text-align: center;
+}
+
+.top-container .links-container {
+  margin-top: 26px;
+  /* display: flex; */
+  align-items: center;
+}
+
+.top-container .social-icon-container {
+  height: 28px;
+  /* display: -webkit-flex;
+  display: flex; */
+  align-items: center;
+  -webkit-align-items: center;
+
+  margin-left: 30px;
+}
+
+.top-container .social-icon-container:hover .social-icon {
+  opacity: 0.5;
+}
+
+.top-container .social-icon {
+  position: relative;
+  margin-right: 25px;
+  opacity: 1;
+  transition: opacity 0.1s;
+
+  text-align: center;
+  padding-left: 5px;
+ 
+}
+
+.top-container .social-icon:hover {
+  opacity: 1 !important;
+  color: #f44336;
+}
 
 /* introduction end --------------------------------------------*/
 
@@ -280,64 +339,56 @@ a:hover {
 /* project highlights end ----------------------------------------------------*/
 
 /* HALF SCREEN */
-@media screen and (max-width: 720px) {
-  /* project highlights half screen */
-  .project_highlights .project_instance {
-    display: block;
-    width: 100%;
+@media screen and (max-width:720px) {
+  /* project description half screen */
+  .project_description p {
+    max-width: 80%;
+    width: fit-content;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    padding-left: 10px;
   }
 
-  .project_highlights .project_photo {
-    text-align: center;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
+  .project_description img {
+    max-width: 100%;
   }
 
-  .project_highlights .project_text_container {
-    width: 70%;
-    height: auto;
-    text-align: left;
-    margin: 50px 0px 0px 15%;
+  .project_description .button_subtext {
+    width: 80%;
+    max-width: 650px;
   }
-
-  .project_highlights p {
-    width: 100%;
-  }
-
-  .project_highlights .project_img {
+  .project_description h2 {
     max-width: 80%;
   }
-
-  .project_highlights .button_subtext {
-    width: 80%;
-    max-width: 500px;
-  }
-
-  /** project highlights half screen end **/
+  /** project description half screen end **/
 }
+
+
 /* MOBILE */
 @media only screen and (max-device-width: 480px) and (orientation: portrait) {
   /* top container mobile */
-  .top-container .intro{
+  .top-container .intro-container-right {
     width: 100%;
     padding-left: 20px;
     padding-right: 0px;
-    min-width: 330px;
+    min-width: 320px;
   }
 
-  .top-container .vert-text{
+  .top-container .intro-content {
     width: 100%;
-    padding-left: 20px;
-    padding-right: 0px;
-    min-width: 330px;
+    padding: 0 0 0 20px; 
   }
 
-  /** job section mobile end **/
-  /* project highlights mobile */
-  .project_highlights .project_instance {
+  .top-container .description-container {
+    width: 100%;
+    padding: 0 0 0 50px; 
+  }
+
+  /** top container mobile end **/
+  /* project description mobile */
+  .project_description .description_instance {
     margin-top: 100px;
   }
-
-  /** project highlights mobile end **/
+  /** project description mobile end **/
 }
+
