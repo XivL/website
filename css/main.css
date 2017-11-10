@@ -340,7 +340,16 @@ a:hover {
 
 /* HALF SCREEN */
 @media screen and (max-width:720px) {
- 
+  .top-container .intro-content {
+    width: 100%;
+    padding: 0 0 0 20px; 
+  }
+
+  .top-container .description-container {
+    width: 100%;
+    padding: 0 0 0 50px; 
+  }
+  
   /* project highlights half screen */
   .project_highlights .project_instance {
     display: block;
@@ -354,19 +363,20 @@ a:hover {
     padding: 0px;
   }
 
-  .project_description img {
-    max-width: 100%;
+  .project_highlights .project_text_container {
+    width: 70%;
+    height: auto;
+    text-align: left;
+    margin: 50px 0px 0px 15%;
   }
 
-  .project_description .button_subtext {
-    width: 80%;
-    max-width: 650px;
+  .project_highlights p {
+    width: 100%;
   }
-  .project_description h2 {
+
+  .project_highlights .project_img {
     max-width: 80%;
   }
-  /** project description half screen end **/
-}
 
   .project_highlights .button_subtext {
     width: 80%;
@@ -378,12 +388,11 @@ a:hover {
 
 /* MOBILE */
 @media only screen and (max-device-width: 480px) and (orientation: portrait) {
-  /* top container mobile */
   .top-container .intro-container-right {
     width: 100%;
     padding-left: 20px;
     padding-right: 0px;
-    min-width: 320px;
+    min-width: 330px;
   }
 
   .top-container .intro-content {
@@ -396,11 +405,12 @@ a:hover {
     padding: 0 0 0 50px; 
   }
 
-  /** top container mobile end **/
-  /* project description mobile */
-  .project_description .description_instance {
+  /* project highlights mobile */
+  .project_highlights .project_instance {
     margin-top: 100px;
   }
-  /** project description mobile end **/
+  /** project highlights mobile end **/
 }
+
+
 
