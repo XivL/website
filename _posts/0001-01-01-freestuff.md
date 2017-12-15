@@ -2,7 +2,7 @@
 preview_title: "Free Stuff"
 link: "http://tranquil-tor-63684.herokuapp.com/main"
 link_title: "Heroku Link"
-preview_description: "Free Stuff is a web application that allows users to list their unwanted items online for others to pick up"
+preview_description: "Free Stuff is a React web application that allows users to pick up unwanted items around them"
 button_text: "About"
 
 folder: "freestuff"
